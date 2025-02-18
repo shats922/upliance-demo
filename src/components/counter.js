@@ -1,6 +1,5 @@
-import { useEffect } from "react";
 import Button from "@mui/material/Button";
-import AddIcon from '@mui/icons-material/Add';
+import { useEffect } from "react";
 
 export function Counter(props) {
   const { counter, setCounter } = props;

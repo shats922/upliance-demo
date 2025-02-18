@@ -1,67 +1,56 @@
-body {
-  width: 100vw;
-  height: 100vh;
+.app {
+  flex-grow: 1;
+  padding: 2rem;
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
-  #root {
+  .flex {
     display: flex;
-    flex-grow: 1;
+    gap: 1rem;
+  }
 
-    .app {
-      flex-grow: 1;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+  .flex-1 {
+    flex: 1;
+  }
 
-      .flex {
-        display: flex;
-        gap: 1rem;
-      }
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    align-items: center;
+  }
 
-      .flex-1 {
-        flex: 1;
-      }
+  .counter {
+    width: 14rem;
+    height: 10rem;
 
-      .card {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        border: 1px solid black;
-        border-radius: 4px;
-        align-items: center;
-      }
+    justify-content: space-between;
 
-      .counter {
-        width: 14rem;
-        height: 10rem;
-
-        justify-content: space-between;
-
-        .btn {
-          width: 100%;
-          justify-content: space-between;
-        }
-      }
-
-      .MuiFormControl-root {
-        width: 90%;
-      }
-
-      form button {
-        width: 10rem;
-        margin-top: 1rem;
-      }
-
-      #editor #content {
-        height: 14rem;
-      }
-
-      table {
-        overflow: auto;
-        max-height: 15rem;
-        display: block;
-      }
+    .btn {
+      width: 100%;
+      justify-content: space-between;
     }
+  }
+
+  .MuiFormControl-root {
+    width: 90%;
+  }
+
+  form button {
+    width: 10rem;
+    margin-top: 1rem;
+  }
+
+  #editor #content {
+    height: 14rem;
+  }
+
+  table {
+    overflow: auto;
+    max-height: 15rem;
+    display: block;
   }
 }

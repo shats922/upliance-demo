@@ -1,0 +1,24 @@
+.app {
+  padding: 2rem;
+  height: 89vh;
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .counter {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+}

@@ -1,24 +1,68 @@
-.app {
-  padding: 2rem;
-  height: 89vh;
-  .flex {
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  #root {
     display: flex;
-    align-items: center;
+    flex-grow: 1;
   }
 
-  .flex-1 {
-    flex: 1;
-  }
-
-  .counter {
-    width: 10rem;
-    height: 10rem;
-    border: 1px solid black;
-    border-radius: 4px;
+  .app {
+    flex-grow: 1;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+    gap: 1rem;
+
+    .flex {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .flex-1 {
+      flex: 1;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      border: 1px solid black;
+      border-radius: 4px;
+      align-items: center;
+    }
+
+    .counter {
+      width: 14rem;
+      height: 10rem;
+
+      justify-content: space-between;
+
+      .btn {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    .MuiFormControl-root {
+      width: 90%;
+    }
+
+    form button {
+      width: 10rem;
+      margin-top: 1rem;
+    }
+
+    #editor #content {
+      height: 14rem;
+    }
+
+    table {
+      overflow: auto;
+      max-height: 15rem;
+      display: block;
+    }
+    
   }
 }

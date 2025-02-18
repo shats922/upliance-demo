@@ -1,3 +1,7 @@
+import {
+  Button,
+  TextField
+} from "@mui/material";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -25,8 +29,8 @@ export function UserForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const userId = uuidv4();
-    const newUser = { userId, ...formData };
+    const id = uuidv4();
+    const newUser = { id, ...formData };
     const updatedUsers = [...userList, newUser];
 
     // Update state and localStorage
@@ -61,44 +65,41 @@ export function UserForm(props) {
 
   return (
     <div className="flex-1">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Address</label>
-          <input
-            type="text"
-            name="address"
-            value={formData.address}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Phone</label>
-          <input
-            type="text"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Save</button>
+      <form onSubmit={handleSubmit} className="card">
+        <TextField
+          label="Name"
+          variant="standard"
+          value={formData.name}
+          name="name"
+          onChange={handleChange}
+        />
+        <TextField
+          label="Address"
+          variant="standard"
+          value={formData.address}
+          name="address"
+          onChange={handleChange}
+        />
+        <TextField
+          label="Email"
+          variant="standard"
+          value={formData.email}
+          name="email"
+          type="email"
+          onChange={handleChange}
+        />
+        <TextField
+          label="Phone"
+          variant="standard"
+          value={formData.phone}
+          name="phone"
+          type="number"
+          onChange={handleChange}
+        />
+
+        <Button variant="contained" type="submit">
+          Save
+        </Button>
       </form>
     </div>
   );

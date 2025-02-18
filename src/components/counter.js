@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Button from "@mui/material/Button";
+import AddIcon from '@mui/icons-material/Add';
 
 export function Counter(props) {
   const { counter, setCounter } = props;
@@ -22,7 +23,7 @@ export function Counter(props) {
 
   return (
     <div className="flex-1">
-      <div className="counter">
+      <div className="counter card">
         <div>Counter: {counter}</div>
         <div className="flex btn">
           <Button variant="contained" onClick={decreaseCount}>
